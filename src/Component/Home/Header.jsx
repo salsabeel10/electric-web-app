@@ -9,15 +9,21 @@ const Header = () => {
       <header className="header_section">
         <div className="header_top">
           <div className="container-fluid">
-            <div className="contact_nav">
-              <a href="">
-                <FaPhoneAlt size={19} className='pr-1 pb-1 text-success' />
-                <span>Call : +971 {num}</span>
-              </a>
-              <a href="">
-                <IoMdMail size={25} className='pr-1 text-success' />
-                <span>Email : {email}</span>
-              </a>
+            <div className="row contact_nav">
+              {/* Phone section */}
+              <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
+                <a href="" className="d-flex align-items-center">
+                  <FaPhoneAlt size={19} className="pr-1 text-success" />
+                  <span>Call: +971 {num}</span>
+                </a>
+              </div>
+              {/* Email section */}
+              <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+                <a href="" className="d-flex align-items-center">
+                  <IoMdMail size={25} className="pr-1 text-success" />
+                  <span>Email: {email}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -25,7 +31,7 @@ const Header = () => {
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg custom_nav-container ">
               <a className="navbar-brand" href="index.html">
-                <span>Inance</span>
+                <span>Highline</span>
               </a>
 
               <button
