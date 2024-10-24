@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
+import { email, num } from '../../../public/client'
+
 const Header = () => {
   return (
     <div>
@@ -10,11 +12,11 @@ const Header = () => {
             <div className="contact_nav">
               <a href="">
                 <FaPhoneAlt size={19} className='pr-1 pb-1 text-success' />
-                <span>Call : +01 123455678990</span>
+                <span>Call : +971 {num}</span>
               </a>
               <a href="">
                 <IoMdMail size={25} className='pr-1 text-success' />
-                <span>Email : demo@gmail.com</span>
+                <span>Email : {email}</span>
               </a>
             </div>
           </div>

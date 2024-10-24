@@ -2,6 +2,7 @@ import React from 'react'
 import { FaLocationDot } from 'react-icons/fa6'
 import { FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
+import { email, location, num } from '../../../public/client'
 
 const Info = () => {
   return (
@@ -18,7 +19,7 @@ const Info = () => {
                       <div className="img-box ">
                         <FaLocationDot size={25}/>
                       </div>
-                      <p>Lorem Ipsum is simply dummy text</p>
+                      <p>{location}</p>
                     </div>
                   </a>
                 </div>
@@ -28,7 +29,7 @@ const Info = () => {
                       <div className="img-box ">
                         <FaPhoneAlt size={25} />
                       </div>
-                      <p>+02 1234567890</p>
+                      <p>+971 {num}</p>
                     </div>
                   </a>
                 </div>
@@ -38,7 +39,7 @@ const Info = () => {
                       <div className="img-box">
                         <IoMdMail size={25} />
                       </div>
-                      <p>demo@gmail.com</p>
+                      <p>{email}</p>
                     </div>
                   </a>
                 </div>

@@ -25,4 +25,8 @@ const clients = [
   },
 ]
 
-export default clients
+export const email ="highlinetechicalservices@gmail.com"
+export const num="559173869"
+export const location ="P.O.BOX: 97261, Dubai - UAE"
+
+export default clients 
