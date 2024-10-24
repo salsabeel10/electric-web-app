@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { FaArrowRight, FaArrowLeft, FaStar } from 'react-icons/fa'
+import { FaArrowRight, FaArrowLeft, FaStar} from 'react-icons/fa'
 
 import clients from '../../../public/client'
 
@@ -52,7 +52,7 @@ const Client = () => {
                           <FaStar key={i} />
                         ))}
                       </div>
-                      <i className="fa fa-quote-left" aria-hidden="true"></i>
+                      
                     </div>
                   </div>
                   <div className="client_text mt-4">
