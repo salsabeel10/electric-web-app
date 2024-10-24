@@ -49,7 +49,7 @@ const Client = () => {
                       <h6>{clients[currentIndex].name}</h6>
                       <div className="rating">
                         {[...Array(5)].map((star, i) => (
-                          <FaStar key={i}/>
+                          <FaStar key={i} />
                         ))}
                       </div>
                       <i className="fa fa-quote-left" aria-hidden="true"></i>
@@ -66,8 +66,9 @@ const Client = () => {
                 className="btn btn-primary position-absolute"
                 style={{
                   top: '50%',
-                  left: '-40px',
+                  left: '0', // Adjusted to make it responsive
                   transform: 'translateY(-50%)',
+                  zIndex: 1, // Ensure button is above content
                 }}
                 onClick={prevClient}
               >
@@ -77,8 +78,9 @@ const Client = () => {
                 className="btn btn-primary position-absolute"
                 style={{
                   top: '50%',
-                  right: '-40px',
+                  right: '0', // Adjusted to make it responsive
                   transform: 'translateY(-50%)',
+                  zIndex: 1, // Ensure button is above content
                 }}
                 onClick={nextClient}
               >
