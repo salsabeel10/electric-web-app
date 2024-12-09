@@ -1,58 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {services} from '../../assets/services.js'
+
+const ServiceBox = ({ img, title, description }) => (
+  <div className="col-sm-6 col-md-4 mx-auto">
+    <div className="box">
+      <div className="img-box">
+        <img src={img} alt={title} />
+      </div>
+      <div className="detail-box">
+        <h5>{title}</h5>
+        <p>{description}</p>
+      </div>
+    </div>
+  </div>
+)
 
 const Services = () => {
+  const [showAll, setShowAll] = useState(false)
+  const displayedServices = showAll ? services : services.slice(0, 3)
   return (
     <section className="service_section layout_padding">
-      <div className="container ">
+      <div className="container">
         <div className="heading_container heading_center">
-          <h2> Our Services </h2>
+          <h2>Our Services</h2>
         </div>
         <div className="row">
-          <div className="col-sm-6 col-md-4 mx-auto">
-            <div className="box ">
-              <div className="img-box">
-                <img src="images/s1.png" alt="" />
-              </div>
-              <div className="detail-box">
-                <h5>Maintenance</h5>
-                <p>
-                  when looking at its layout. The point of using Lorem Ipsum is
-                  that it has a more-or-less normal
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-md-4 mx-auto">
-            <div className="box ">
-              <div className="img-box">
-                <img src="images/s2.png" alt="" />
-              </div>
-              <div className="detail-box">
-                <h5>Electrical</h5>
-                <p>
-                  when looking at its layout. The point of using Lorem Ipsum is
-                  that it has a more-or-less normal
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-md-4 mx-auto">
-            <div className="box ">
-              <div className="img-box">
-                <img src="images/s3.png" alt="" />
-              </div>
-              <div className="detail-box">
-                <h5>Plumbing</h5>
-                <p>
-                  when looking at its layout. The point of using Lorem Ipsum is
-                  that it has a more-or-less normal
-                </p>
-              </div>
-            </div>
-          </div>
+          {displayedServices.map((service, index) => (
+            <ServiceBox
+              key={index}
+              img={service.img}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
         </div>
         <div className="btn-box">
-          <a href="">View More</a>
+          <a onClick={() => setShowAll(!showAll)} style={{ cursor: 'pointer' }}>
+            {showAll ? 'Show Less' : 'View More'}
+          </a>
         </div>
       </div>
     </section>

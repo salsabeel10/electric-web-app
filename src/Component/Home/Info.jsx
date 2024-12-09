@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaLocationDot } from 'react-icons/fa6'
-import { FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter, FaYoutube,FaWhatsapp } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
-import { email, location, num } from '../../../public/client'
+import { email, location, num ,whatsappNum } from '../../../public/client'
 
 const Info = () => {
   return (
@@ -27,9 +27,9 @@ const Info = () => {
                   <a href="">
                     <div className="item ">
                       <div className="img-box ">
-                        <FaPhoneAlt size={25} />
+                        <FaWhatsapp size={25} />
                       </div>
-                      <p>+971 {num}</p>
+                      <p>+971 {whatsappNum}</p>
                     </div>
                   </a>
                 </div>
