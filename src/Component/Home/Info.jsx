@@ -17,7 +17,7 @@ const Info = () => {
                   <a href="">
                     <div className="item ">
                       <div className="img-box ">
-                        <FaLocationDot size={25}/>
+                        <FaLocationDot size={25} />
                       </div>
                       <p>{location}</p>
                     </div>
@@ -62,6 +62,9 @@ const Info = () => {
           </a>
           <a href="">
             <FaInstagram size={22} />
+          </a>
+          <a href="">
+            <FaWhatsapp size={22} />
           </a>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import {services} from '../../assets/services.js'
+import { services } from '../../assets/services.js'
 
 const ServiceBox = ({ img, title, description }) => (
   <div className="col-sm-6 col-md-4 mx-auto">
-    <div className="box">
+    <div className="box" style={{ cursor: 'pointer' }}>
       <div className="img-box">
         <img src={img} alt={title} />
       </div>
