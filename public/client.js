@@ -26,7 +26,7 @@ const clients = [
 ]
 
 export const email ="highlinetechnicalservices@gmail.com"
-export const whatsappNum="559173869"
+export const whatsappNum=559173869
 export const num = '521603869'
 export const location ="P.O.BOX: 97261, Dubai - UAE"
 

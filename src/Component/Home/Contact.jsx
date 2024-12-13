@@ -1,6 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { whatsappNum } from '../../../public/client'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    number: '',
+    email: '',
+    message: '',
+  })
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const { name, number, email, message } = formData
+
+    // Construct the WhatsApp message
+    const whatsappMessage = `Hello, I would like to inquire: 
+    Name: ${name}
+    Phone Number: ${number}
+    Email: ${email}
+    Message: ${message}`
+
+    // WhatsApp API URL
+    const whatsappUrl = `https://wa.me/+971${whatsappNum}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank')
+  }
   return (
     <section className="contact_section layout_padding">
       <div className="container">
@@ -11,25 +44,50 @@ const Contact = () => {
           <div className="col-md-6 col-12">
             {' '}
             {/* Add col-12 for mobile responsiveness */}
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <div>
-                <input type="text" placeholder="Name" />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  name="number"
+                  value={formData.number}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div>
                 <input
                   type="text"
                   className="message-box"
                   placeholder="Message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div className="d-flex ">
-                <button>SEND</button>
+                <button type="submit">SEND</button>
               </div>
             </form>
           </div>
