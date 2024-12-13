@@ -1,10 +1,11 @@
 import React from 'react'
 import Header from '../Home/Header'
 import Services from '../Home/Services'
+import './services.css'
 
 const ServicesPage = () => {
   return (
-    <div>
+    <div className='main-services'>
         <Header />
         <Services />
     </div>
