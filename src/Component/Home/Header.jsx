@@ -2,8 +2,12 @@ import React from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import { email, num } from '../../../public/client'
+import { useLocation } from 'react-router-dom'
+
 
 const Header = () => {
+  const location = useLocation()
+  console.log(location.pathname)
   return (
     <div>
       <header className="header_section">
@@ -51,25 +55,41 @@ const Header = () => {
                 id="navbarSupportedContent"
               >
                 <ul className="navbar-nav ">
-                  <li className="nav-item active">
+                  <li
+                    className={`nav-item ${
+                      location.pathname === '/' ? 'active' : ''
+                    }`}
+                  >
                     <a className="nav-link" href="/">
                       Home <span className="sr-only">(current)</span>
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li
+                    className={`nav-item ${
+                      location.pathname === '/about' ? 'active' : ''
+                    }`}
+                  >
                     <a className="nav-link" href="/about">
                       {' '}
                       About
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li
+                    className={`nav-item ${
+                      location.pathname === '/service' ? 'active' : ''
+                    }`}
+                  >
                     <a className="nav-link" href="/service">
                       Services
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li
+                    className={`nav-item ${
+                      location.pathname === '/contact' ? 'active' : ''
+                    }`}
+                  >
                     <a className="nav-link" href="/contact">
-                      Contact Us
+                      Contact
                     </a>
                   </li>
                 </ul>
