@@ -59,21 +59,21 @@ const Info = () => {
       <div className="social-box">
         <h4>Follow Us</h4>
         <div className="box">
-          <a href="">
+          <Link>
             <FaFacebook size={23} />
-          </a>
-          <a href="">
+          </Link>
+          <Link>
             <FaTwitter size={22} />
-          </a>
-          <a href="">
+          </Link>
+          <Link>
             <FaYoutube size={22} />
-          </a>
-          <a href="">
+          </Link>
+          <Link>
             <FaInstagram size={22} />
-          </a>
-          <a href="">
+          </Link>
+          <Link>
             <FaWhatsapp size={22} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
