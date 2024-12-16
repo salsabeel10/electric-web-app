@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Slider = () => {
   return (
@@ -18,7 +19,7 @@ const Slider = () => {
                 pariatur, tempora iusto, ad possimus soluta hic praesentium
                 mollitia consequatur beatae, aspernatur culpa.
               </p>
-              <a href="/contact">Contact Us</a>
+              <Link to="/contact">Contact Us</Link>
             </div>
           </div>
           <div className="col-md-6">
