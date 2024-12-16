@@ -32,24 +32,30 @@ const Info = () => {
                   </Link>
                 </div>
                 <div className="col-md-4">
-                  <Link >
+                  <a
+                    href={`https://wa.me/+971559173869`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="item ">
                       <div className="img-box ">
                         <FaWhatsapp size={25} />
                       </div>
                       <p>+971 {whatsappNum}</p>
                     </div>
-                  </Link>
+                  </a>
                 </div>
                 <div className="col-md-4">
-                  <Link>
+                  <a
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+                  >
                     <div className="item ">
                       <div className="img-box">
                         <IoMdMail size={25} />
                       </div>
                       <p>{email}</p>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

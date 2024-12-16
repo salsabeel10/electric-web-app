@@ -15,14 +15,17 @@ const Header = () => {
             <div className="row contact_nav">
               {/* Phone section */}
               <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
-                <a className="d-flex align-items-center">
+                <a href={`tel:+971${num}`} className="d-flex align-items-center">
                   <FaPhoneAlt size={19} className="pr-1 text-success" />
                   <span>Call: +971 {num}</span>
                 </a>
               </div>
               {/* Email section */}
               <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-                <a href="" className="d-flex align-items-center">
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+                  className="d-flex align-items-center"
+                >
                   <IoMdMail size={25} className="pr-1 text-success" />
                   <span>Email: {email}</span>
                 </a>
