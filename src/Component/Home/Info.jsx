@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import { email, location, num, whatsappNum } from '../../assets/client'
+import { Link } from 'react-router-dom'
 
 const Info = () => {
   return (
@@ -21,34 +22,34 @@ const Info = () => {
             <div className="info_items">
               <div className="row">
                 <div className="col-md-4">
-                  <a href="">
+                  <Link>
                     <div className="item ">
                       <div className="img-box ">
                         <FaLocationDot size={25} />
                       </div>
                       <p>{location}</p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-md-4">
-                  <a href="">
+                  <Link >
                     <div className="item ">
                       <div className="img-box ">
                         <FaWhatsapp size={25} />
                       </div>
                       <p>+971 {whatsappNum}</p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-md-4">
-                  <a href="">
+                  <Link>
                     <div className="item ">
                       <div className="img-box">
                         <IoMdMail size={25} />
                       </div>
                       <p>{email}</p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

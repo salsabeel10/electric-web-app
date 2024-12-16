@@ -2,7 +2,7 @@ import React from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import { email, num } from '../../assets/client'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Header = () => {
   const location = useLocation()
@@ -15,7 +15,7 @@ const Header = () => {
             <div className="row contact_nav">
               {/* Phone section */}
               <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-start mb-2 mb-md-0">
-                <a href="" className="d-flex align-items-center">
+                <a className="d-flex align-items-center">
                   <FaPhoneAlt size={19} className="pr-1 text-success" />
                   <span>Call: +971 {num}</span>
                 </a>
@@ -59,37 +59,37 @@ const Header = () => {
                       location.pathname === '/' ? 'active' : ''
                     }`}
                   >
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                       Home <span className="sr-only">(current)</span>
-                    </a>
+                    </Link>
                   </li>
                   <li
                     className={`nav-item ${
                       location.pathname === '/about' ? 'active' : ''
                     }`}
                   >
-                    <a className="nav-link" href="/about">
+                    <Link className="nav-link" to="/about">
                       {' '}
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li
                     className={`nav-item ${
                       location.pathname === '/service' ? 'active' : ''
                     }`}
                   >
-                    <a className="nav-link" href="/service">
+                    <Link className="nav-link" to="/service">
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li
                     className={`nav-item ${
                       location.pathname === '/contact' ? 'active' : ''
                     }`}
                   >
-                    <a className="nav-link" href="/contact">
+                    <Link className="nav-link" to="/contact">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

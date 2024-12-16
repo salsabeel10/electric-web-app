@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Professional = () => {
   return (
@@ -22,7 +23,7 @@ const Professional = () => {
                 sure there isn't anything embarrassing hidden in the middle of
                 text. All randomised words which don't look even slightly
               </p>
-              <a href="">Read More</a>
+              <Link to="/about">Read More</Link>
             </div>
           </div>
         </div>
