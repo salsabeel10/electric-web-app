@@ -1,9 +1,8 @@
 import React from 'react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
-import { email, num } from '../../../public/client'
+import { email, num } from '../../assets/client'
 import { useLocation } from 'react-router-dom'
-
 
 const Header = () => {
   const location = useLocation()

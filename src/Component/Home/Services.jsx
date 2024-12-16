@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { services } from '../../assets/services.js'
+import { useLocation } from 'react-router-dom'
+
 
 const ServiceBox = ({ img, title, description }) => (
   <div className="col-sm-6 col-md-4 mx-auto">
@@ -17,6 +19,15 @@ const ServiceBox = ({ img, title, description }) => (
 
 const Services = () => {
   const [showAll, setShowAll] = useState(false)
+  const location = useLocation()
+  useEffect(() => {
+    if (location.pathname === '/service') {
+      setShowAll(true)
+    } else {
+      setShowAll(false)
+    }
+  }, [location.pathname])
+
   const displayedServices = showAll ? services : services.slice(0, 3)
   return (
     <section className="service_section layout_padding">

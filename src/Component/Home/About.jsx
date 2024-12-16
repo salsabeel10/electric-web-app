@@ -16,7 +16,7 @@ const About = () => {
                 suffered alteration in some form, by injected humour, or
                 randomised
               </p>
-              <a href="">Read More</a>
+              <a href="/about">Read More</a>
             </div>
           </div>
           <div className="col-lg-7 col-md-6">

@@ -1,8 +1,15 @@
 import React from 'react'
 import { FaLocationDot } from 'react-icons/fa6'
-import { FaFacebook, FaInstagram, FaPhoneAlt, FaTwitter, FaYoutube,FaWhatsapp } from 'react-icons/fa'
+import {
+  FaFacebook,
+  FaInstagram,
+  FaPhoneAlt,
+  FaTwitter,
+  FaYoutube,
+  FaWhatsapp,
+} from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
-import { email, location, num ,whatsappNum } from '../../../public/client'
+import { email, location, num, whatsappNum } from '../../assets/client'
 
 const Info = () => {
   return (

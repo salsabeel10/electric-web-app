@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { FaArrowRight, FaArrowLeft, FaStar} from 'react-icons/fa'
+import { FaArrowRight, FaArrowLeft, FaStar } from 'react-icons/fa'
 
-import clients from '../../../public/client'
+import clients from '../../assets/client'
 
 const Client = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -52,7 +52,6 @@ const Client = () => {
                           <FaStar key={i} />
                         ))}
                       </div>
-                      
                     </div>
                   </div>
                   <div className="client_text mt-4">
@@ -95,4 +94,3 @@ const Client = () => {
 }
 
 export default Client
-

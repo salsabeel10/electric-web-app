@@ -18,7 +18,7 @@ const Slider = () => {
                 pariatur, tempora iusto, ad possimus soluta hic praesentium
                 mollitia consequatur beatae, aspernatur culpa.
               </p>
-              <a href="">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </div>
           </div>
           <div className="col-md-6">

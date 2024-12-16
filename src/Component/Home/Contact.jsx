@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { whatsappNum } from '../../../public/client'
+import { whatsappNum } from '../../assets/client'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
